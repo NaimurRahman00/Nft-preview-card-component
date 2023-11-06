@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+:root {
+    --softBlue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    --veryDarkBlueMainBg: hsl(217, 54%, 11%);
+    --veryDarkBlueCardBg: hsl(216, 50%, 16%);
+    --veryDarkBlueLine: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+    --shadow-color: rgb(4, 7, 23);
+    --PrimaryFont: 'Outfit', sans-serif;
+}
+*, *::after, *::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: var(--veryDarkBlueMainBg);
+    font-family: var(--PrimaryFont);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+h2 {
+    font-size: 22px;
+    color: var(--white);
+    margin-bottom: 25px;
+}
+p {
+    font-size: 18px;
+    color: var(--softBlue);
+    margin-bottom: 25px;
+}
+/* Hover area start */
+
+main:hover {
+    box-shadow: 10px 10px 20px -1px var(--shadow-color), 10px 10px 10px -1rem var(--veryDarkBlueMainBg);
+    transition: 500ms;
+    -webkit-transition: 500ms;
+    -moz-transition: 500ms;
+    -ms-transition: 500ms;
+    -o-transition: 500ms;
+    transform: scale(1.03);
+    -webkit-transform: scale(1.03);
+    -moz-transform: scale(1.03);
+    -ms-transform: scale(1.03);
+    -o-transform: scale(1.03);
+}
+.img-sec:hover .overlay {
+    opacity: 0.5;
+    cursor: pointer;
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+}
+.img-sec:hover .view-icon {
+    display: block;
+    cursor: pointer;
+    transition: .2s;
+    -webkit-transition: .2s;
+    -moz-transition: .2s;
+    -ms-transition: .2s;
+    -o-transition: .2s;
+}
+h2:hover {
+    color: var(--cyan);
+    transition: .2s;
+    -webkit-transition: .2s;
+    -moz-transition: .2s;
+    -ms-transition: .2s;
+    -o-transition: .2s;
+    cursor: pointer;
+}
+.avater p span:hover {
+    color: var(--cyan);
+    transition: .2s;
+    -webkit-transition: .2s;
+    -moz-transition: .2s;
+    -ms-transition: .2s;
+    -o-transition: .2s;
+}
+.attribution a:hover {
+    color: var(--cyan);
+    transition: .2s;
+    -webkit-transition: .2s;
+    -moz-transition: .2s;
+    -ms-transition: .2s;
+    -o-transition: .2s;
+}
+
+/* Hover area end */
+main {
+    background-color: var(--veryDarkBlueCardBg);
+    width: 350px;
+    padding: 25px;
+    box-shadow: 0rem 1rem 1rem 1rem rgba(0, 0, 0, 0.05);
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+.img-sec {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.overlay {
+    height: 300px;
+    width: 300px;
+    background-color: var(--cyan);
+    position: absolute;
+    opacity: 0;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.img-equilibrium {
+    width: 100%;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.view-icon {
+    position: absolute;
+    display: none;
+}
+/* Nft body */
+.description {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--veryDarkBlueLine);
+}
+.description .price , .time {
+    display: flex;
+    align-items: center;
+}
+.price img , .time img{
+    margin-right: 10px;
+    margin-top: -24px;
+}
+.price p {
+    color: var(--cyan);
+}
+.avater {
+    display: flex;
+    margin-bottom: -15px;
+    margin-top: 15px;
+}
+.avater img {
+    border: 1px solid var(--white);
+    margin-right: 15px;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.avater p {
+    margin-top: 5px;
+}
+
+.avater p span {
+    color: var(--white);
+}
+/* Footer sec */
+footer {
+    position: absolute;
+    bottom: 0;
+}
+.attribution {
+     font-size: 11px; text-align: center; 
+     color: hsl(228, 45%, 44%);
+}
+.attribution a { 
+    color: var(--softBlue); 
+}
+/* Media query */
+@media only screen and (max-width: 375px) {
+    main {
+        width: 90%;
+    }
+  }
